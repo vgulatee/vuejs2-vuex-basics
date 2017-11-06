@@ -12,11 +12,10 @@
 <script>
     export default {
         computed: {
-          users() {
-              return this.$store.state.users.filter(user => {
-                  return !user.registered;
-              });
-          }
+            users(){
+                return this.$store.getters. unregisteredUsers;
+            }
+
         },
         methods: {
             registerUser(user) {
